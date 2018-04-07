@@ -32,7 +32,7 @@ Several quick start options are available:
 Example
 ~~~~~~~
 
-::
+```
     # Import the package
     from archery import api
 
@@ -55,5 +55,7 @@ Example
 
     # Printing in Json Format
     print project.data_json()
+
+```
 
 
