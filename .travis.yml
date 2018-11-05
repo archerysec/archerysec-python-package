@@ -1,0 +1,15 @@
+language: python
+python:
+- '2.7'
+script:
+- python pyArchery/setup.py install
+notifications:
+  email: false
+deploy:
+  provider: pypi
+  user: archerysec
+  password:
+    secure: Ea7DwzL5tns1uJARMJFhavGAWafS0nF7d+UpW/XryqDIY/EeUSrKZ+5kzAdrQWUijWYO7LGMwILMvG2j5zI0+WJxn5Niw784fepC3RAJnv/sL3beefU7hlms3ydeA3vA3Ht9M/C8tFsckOkK3KMXXCkmweE7vo3n3C95bN8uea2B/86QHzc9cy2kEW5Urb0gQLZbmLjwNtwdw0o1CvyfmCUwnF0eGDcZidZYjE788cA45n3WnKGfGdcHsnOtV9K+tgqnqFrZWTpBh86HRxZVdJqwt3u8nTC+PmFOi2GtDqiGaDtCVJ1TINZf15S1+gUEssbFcZYr4B6eC72ZhONEuotX8WOBLxxrMEfh2aRPR21HIFgehlyAVUAG2r5NVaUw51zmR5Dh924Q3craQ+ljj5fH2YDcBaAWqOBy47uSnA9PxiFSMGTH8k20EUqmu1SRet3tWceCU8VX1KPBANfnQUMfJYSLIlzwwZIaGE0K5i0zxlb168vXqdQQvLID9LcH2/YrkLJD3juZc205/Bnv+7lzIiUrsO3HiubPxzmx6/oNohNY4YTk11pZGhAQdMBmi5DSjvY05XKvqmnlGgzXHD3tok/f4OsHMIw0aDYExfBL30RSbWjOstw409FlUZ5l5Jj/daiYTmsmc02VlynUG+U130nRum7KkGq4XP1iE8o=
+  on:
+    distributions: sdist bdist_wheel
+    repo: archerysec/archerysec-python-package
