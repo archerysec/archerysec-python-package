@@ -13,3 +13,4 @@ deploy:
   on:
     distributions: sdist bdist_wheel
     repo: archerysec/archerysec-python-package
+    branch: master
