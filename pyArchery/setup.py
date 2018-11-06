@@ -1,19 +1,15 @@
 #!/usr/bin/env python
 
+import ast
 import os
+import re
 
-from archery import __version__ as version
+from setuptools import setup
 
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+here = os.path.abspath(os.path.dirname(__file__))
 
-with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
-    README = readme.read()
-
-# allow setup.py to be run from any path
-os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
+with open(os.path.join(here, 'archery', '__init__.py'), 'rb') as f:
+    version = str(ast.literal_eval(re.search(r'__version__\s*=\s*(.*)', f.read().decode('utf-8')).group(1)))
 
 with open('README.md', 'r') as f:
     readme = f.read()
@@ -22,7 +18,6 @@ setup(
     name='pyArchery',
     packages=[
         'archery',
-
     ],
     version=version,
     description='Python library enumerating the Archery Tool RESTFul API endpoints.',
