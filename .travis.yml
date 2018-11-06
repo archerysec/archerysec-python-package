@@ -2,7 +2,8 @@ language: python
 python:
 - '2.7'
 script:
-- python pyArchery/setup.py install
+- cd pyArchery
+- python setup.py install
 notifications:
   email: false
 deploy:
