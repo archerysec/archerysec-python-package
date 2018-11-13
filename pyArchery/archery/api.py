@@ -148,6 +148,40 @@ class ArcheryAPI(object):
 
         return self._request('GET', url, params='format=json', headers=headers)
 
+    def zap_scans(self, auth):
+        """
+        List all web scans
+        :return:
+        """
+        # Headers included
+        headers = all_headers(auth_token=auth)
+
+        # Body data in json format
+        url = '/api/zapscanstatus/'
+
+        return self._request('GET', url, params='format=json', headers=headers)
+
+    def zap_scan_status(self, auth, scan_id):
+        """
+
+        :param auth:
+        :param scan_id:
+        :return:
+        """
+
+        url = '/api/zapscanstatus/'
+
+        # Headers included
+        headers = all_headers(auth_token=auth)
+
+        # Body data in json format
+        data = {
+            "scan_scanid": scan_id
+        }
+        data = json.dumps(data)
+
+        return self._request('POST', url, params='format=json', headers=headers, data=data)
+
     def create_project(self, auth, project_name, project_disc, project_start, project_end, project_owner):
         """
         Project Create
