@@ -224,6 +224,48 @@ class ArcheryAPI(object):
 
         return self._request('POST', url, params='format=json', headers=headers, data=data)
 
+    def dependencycheck_scan_status(self, auth, scan_id):
+        """
+
+        :param auth:
+        :param scan_id:
+        :return:
+        """
+
+        url = '/api/dependencycheckscanstatus/'
+
+        # Headers included
+        headers = all_headers(auth_token=auth)
+
+        # Body data in json format
+        data = {
+            "scan_id": scan_id
+        }
+        data = json.dumps(data)
+
+        return self._request('POST', url, params='format=json', headers=headers, data=data)
+
+    def findbugs_scan_status(self, auth, scan_id):
+        """
+
+        :param auth:
+        :param scan_id:
+        :return:
+        """
+
+        url = '/api/findbugscanstatus/'
+
+        # Headers included
+        headers = all_headers(auth_token=auth)
+
+        # Body data in json format
+        data = {
+            "scan_id": scan_id
+        }
+        data = json.dumps(data)
+
+        return self._request('POST', url, params='format=json', headers=headers, data=data)
+
     def netsparker_scan_status(self, auth, scan_id):
         """
 
