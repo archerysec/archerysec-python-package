@@ -349,7 +349,6 @@ class ArcheryAPI(object):
             "project_owner": project_owner,
         }
         data = json.dumps(data)
-        print data
 
         return self._request('POST', url, params='format=json', headers=headers, data=data)
 
