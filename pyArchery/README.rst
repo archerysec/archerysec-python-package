@@ -7,12 +7,12 @@ Archery is an opensource vulnerability assessment and management tool which help
 
 
 ArcherySec python package
-*************************
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 ArcherySec Python package interacting with Archery using Archery RESTful API. It's allow you to create project, perform scans, extract scan data, etc. For more information please visit our `Developer Website <http://developers.archerysec.info/>`_
 
 Quick Start
-*************
+~~~~~~~~~~~~
 
 Several quick start options are available:
 
@@ -21,7 +21,7 @@ Several quick start options are available:
 - `Download the latest release <https://github.com/target/webinspectapi/releases/latest/>`__
 
 Example
-*************
+~~~~~~~~~~~~
 
 ::
     # Import the package
