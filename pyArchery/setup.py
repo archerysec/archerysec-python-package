@@ -4,28 +4,34 @@ import ast
 import os
 import re
 
-from setuptools import setup
+from PyBurprestapi import __version__ as version
 
-here = os.path.abspath(os.path.dirname(__file__))
-
-with open(os.path.join(here, 'archery', '__init__.py'), 'rb') as f:
-    version = str(ast.literal_eval(re.search(r'__version__\s*=\s*(.*)', f.read().decode('utf-8')).group(1)))
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
 
 with open('README.rst', 'r') as f:
     readme = f.read()
 
+# Publish helper
+if sys.argv[-1] == 'build':
+    os.system('python setup.py sdist bdist_wheel')
+    sys.exit(0)
+
+if sys.argv[-1] == 'install':
+    os.system('python setup.py sdist --formats=zip')
+    sys.exit(0)
+
 setup(
     name='pyArchery',
-    packages=[
-        'archery',
-    ],
+    packages=['pyArchery'],
     version=version,
-    description='Python library enumerating the Archery Tool RESTFul API endpoints.',
+    description='Python library enumerating the Archery tool RESTFul API endpoints.',
     long_description=readme,
     author='Anand Tiwari',
     author_email='anandtiwarics@gmail.com',
     url='https://github.com/archerysec/',
-    download_url='',
     license='MIT License',
     zip_safe=True,
     install_requires=['requests'],
@@ -39,3 +45,4 @@ setup(
         'Programming Language :: Python',
     ]
 )
+
