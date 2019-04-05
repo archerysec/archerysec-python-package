@@ -3,8 +3,9 @@
 import ast
 import os
 import re
+import sys
 
-from PyBurprestapi import __version__ as version
+from archery import __version__ as version
 
 try:
     from setuptools import setup
@@ -24,8 +25,8 @@ if sys.argv[-1] == 'install':
     sys.exit(0)
 
 setup(
-    name='pyArchery',
-    packages=['pyArchery'],
+    name='archery',
+    packages=['archery'],
     version=version,
     description='Python library enumerating the Archery tool RESTFul API endpoints.',
     long_description=readme,
