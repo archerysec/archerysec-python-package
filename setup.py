@@ -25,7 +25,7 @@ if sys.argv[-1] == 'install':
     sys.exit(0)
 
 setup(
-    name='archery',
+    name='pyArchery',
     packages=['pyArchery'],
     version=version,
     description='Python library enumerating the Archery tool RESTFul API endpoints.',
