@@ -10,8 +10,8 @@ here = os.path.abspath(os.path.dirname(__file__))
 
 with open(os.path.join(here, 'archery', '__init__.py'), 'rb') as f:
     version = str(ast.literal_eval(re.search(r'__version__\s*=\s*(.*)', f.read().decode('utf-8')).group(1)))
-
-with open('README.md', 'r') as f:
+    
+with open('README.rst', 'r') as f:
     readme = f.read()
 
 setup(
