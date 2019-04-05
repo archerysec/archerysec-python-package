@@ -9,8 +9,7 @@ notifications:
 deploy:
   provider: pypi
   user: archerysec
-  password:
-    secure: hIrgCGt72Dfw7nOX6NcLEmqb53Mrl2pncvoL+qQ8vjQPtgrFjOMB1v/2YEz5iI4kAVVgfjBP134oiyRqUzlJxqIBnvN1cAhy43T1QXJaNMc6EplMmEYF1oBOVRz7a/uiv8H3vj+yLcj06fdviIJA8S14MyjjjseR5LMtUsXfGzWeFckS2QaHxAeS94Srtc7vyLMxwSu2Mn55w0Tbw/Jv0aN7e8FXFVcR/5TMWDirv4oizgzg4ldrEMU/vDBGTYtKay+t1IJCbnNuXsS7D+DAWRFTn8YnC0rKvbjJMHRFUN2hOuIFWfkPan/aRnFNkrCfgIUUooz7ARbWeRPuhpFFNbPQgrPkSss5+Jfdxigv33Gp1/Qr9YJH61Y0glkjns269AyUlAcxKRS6lINGIK8pNn3aXM3LTFoYW8NZqthqLUTxtUqBByk2k4CZ8NAlFCCFelRQgoak9VdltHNCR/SMWKWhDbg/lmxLoVgb8AkPkN/FL4QdGCke0vouDYj8Zsg62CIF/ZZkItRVPm7+8THT7RrQCtACj4Vq3jd1kZHxlhoMfea2QQ+VIHV7qVKCIAozenMo/xAigFB9Rdq3ONh3i34EloVm2ZZRLsFiCZc5Y/v5smzltmx3wlINYJh21caQ109B0l7dheBrB6fdCAj8XHBA/AxhupOFE0sfsarKj2I=
+  password: $PYPASS
   on:
     distributions: sdist bdist_wheel
     repo: archerysec/archerysec-python-package
