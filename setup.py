@@ -5,7 +5,7 @@ import os
 import re
 import sys
 
-from archery import __version__ as version
+from pyArchery.archery import __version__ as version
 
 try:
     from setuptools import setup
@@ -26,7 +26,7 @@ if sys.argv[-1] == 'install':
 
 setup(
     name='archery',
-    packages=['archery'],
+    packages=['pyArchery'],
     version=version,
     description='Python library enumerating the Archery tool RESTFul API endpoints.',
     long_description=readme,
