@@ -1,4 +1,4 @@
-from archery import api
+from pyArchery import api
 
 # Set Archery url
 host = 'http://127.0.0.1:8000'
