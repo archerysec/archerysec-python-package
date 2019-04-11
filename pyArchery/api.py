@@ -338,7 +338,6 @@ class ArcheryAPI(object):
 
         # Headers included
         headers = all_headers(auth_token=auth)
-        print headers
 
         # Body data in json format
         data = {
