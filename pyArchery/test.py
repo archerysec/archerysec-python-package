@@ -19,4 +19,4 @@ web_scan_result = archery.findbugs_scan_status(
     scan_id='d6ffdf33-036a-41d5-94ac-339c9a4b3105',
 )
 
-print web_scan_result.data_json()
+print(web_scan_result.data_json())
