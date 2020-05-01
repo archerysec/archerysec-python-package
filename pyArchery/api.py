@@ -266,6 +266,132 @@ class ArcheryAPI(object):
 
         return self._request('POST', url, params='format=json', headers=headers, data=data)
 
+    def bandit_scan_status(self, auth, scan_id):
+        """
+
+        :param auth:
+        :param scan_id:
+        :return:
+        """
+
+        url = '/api/banditscanstatus/'
+
+        # Headers included
+        headers = all_headers(auth_token=auth)
+
+        # Body data in json format
+        data = {
+            "scan_id": scan_id
+        }
+        data = json.dumps(data)
+
+        return self._request('POST', url, params='format=json', headers=headers, data=data)
+
+    def clair_scan_status(self, auth, scan_id):
+        """
+
+        :param auth:
+        :param scan_id:
+        :return:
+        """
+
+        url = '/api/clairscanstatus/'
+
+        # Headers included
+        headers = all_headers(auth_token=auth)
+
+        # Body data in json format
+        data = {
+            "scan_id": scan_id
+        }
+        data = json.dumps(data)
+
+        return self._request('POST', url, params='format=json', headers=headers, data=data)
+
+    def nodejs_scan_status(self, auth, scan_id):
+        """
+
+        :param auth:
+        :param scan_id:
+        :return:
+        """
+
+        url = '/api/nodejsscanstatus/'
+
+        # Headers included
+        headers = all_headers(auth_token=auth)
+
+        # Body data in json format
+        data = {
+            "scan_id": scan_id
+        }
+        data = json.dumps(data)
+
+        return self._request('POST', url, params='format=json', headers=headers, data=data)
+
+    def npmaudit_scan_status(self, auth, scan_id):
+        """
+
+        :param auth:
+        :param scan_id:
+        :return:
+        """
+
+        url = '/api/npmauditscanstatus/'
+
+        # Headers included
+        headers = all_headers(auth_token=auth)
+
+        # Body data in json format
+        data = {
+            "scan_id": scan_id
+        }
+        data = json.dumps(data)
+
+        return self._request('POST', url, params='format=json', headers=headers, data=data)
+
+    def trivy_scan_status(self, auth, scan_id):
+        """
+
+        :param auth:
+        :param scan_id:
+        :return:
+        """
+
+        url = '/api/trivyscanstatus/'
+
+        # Headers included
+        headers = all_headers(auth_token=auth)
+
+        # Body data in json format
+        data = {
+            "scan_id": scan_id
+        }
+        data = json.dumps(data)
+
+        return self._request('POST', url, params='format=json', headers=headers, data=data)
+
+    def bandit_scan_status(self, auth, scan_id):
+        """
+
+        :param auth:
+        :param scan_id:
+        :return:
+        """
+
+        url = '/api/banditscanstatus/'
+
+        # Headers included
+        headers = all_headers(auth_token=auth)
+
+        # Body data in json format
+        data = {
+            "scan_id": scan_id
+        }
+        data = json.dumps(data)
+
+        return self._request('POST', url, params='format=json', headers=headers, data=data)
+
     def netsparker_scan_status(self, auth, scan_id):
         """
 

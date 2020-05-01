@@ -8,7 +8,7 @@ archery = api.ArcheryAPI(host)
 authenticate = archery.archery_auth('admin', 'admin@123A')
 
 token = authenticate.data
-for key, value in token.viewitems():
+for key, value in token.items():
     token = value
 
 # # List all Projects
