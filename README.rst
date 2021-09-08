@@ -19,7 +19,6 @@ Several quick start options are available:
 
 - Install with pip: ``pip install PyArchery``
 - Build locally: ``python setup.py build``
-- `Download the latest release <https://github.com/target/webinspectapi/releases/latest/>`__
 
 
 Example
