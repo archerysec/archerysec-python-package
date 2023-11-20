@@ -2,22 +2,18 @@
 ArcherySec REST API
 *******************
 
-Archery is an opensource vulnerability assessment and management tool which helps developers and pentesters to perform scans and manage vulnerabilities. Archery uses popular opensource tools to perform comprehensive scanning for web application and network. It also performs web application dynamic authenticated scanning and covers the whole applications by using selenium. The developers can also utilize the tool for implementation of their DevOps CI/CD environment.
-
-- `For More details <http://docs.archerysec.com/>`__
-
 Requirements
 ~~~~~~~~~~~~
 
-- `Archery tool <https://github.com/archerysec/archerysec>`__
-- Python 2.7
+- `Archery tool <https://github.com/wensaus/ArcheryPy>`__
+- Python 3.x
 
 Quick Start
 ~~~~~~~~~~~~
 
 Several quick start options are available:
 
-- Install with pip: ``pip install PyArchery``
+- Install with pip: ``pip install ArcheryPy``
 - Build locally: ``python setup.py build``
 
 
@@ -27,31 +23,46 @@ Example
 ::
 
 
-    # Import the package
-    from archery import api
+    from archeryPy import api
 
-    # Set Archery url
-    host = 'http://127.0.0.1:8008'
+# Set Archery url
+host = 'https://127.0.0.1:8080'
 
-    # Setup archery connection
-    archery = api.ArcheryAPI(host)
+# Setup archery connection
+archery = api.ArcheryRestApi(host)
 
-    # Provide Archery Credentials for authentication.
-    authenticate = archery.archery_auth('admin', 'admin@123A')
+# 获取token
+authenticate = archery.archery_auth('admin', 'admin123')
 
-    # Collect Token after authentication
-    token = authenticate.data
-    for key, value in token.viewitems():
-        token = value
+# 刷新token
+archery.archery_auth_refresh(authenticate['refresh'])
 
-    # List all Projects
-    project = archery.list_project(auth=token)
+# 验证token
+archery.archery_auth_verify(authenticate['token'])
 
-    # Printing in Json Format
-    print project.data_json()
+# 列出所有SQL上线工单（过滤，分页）
+archery.archery_workflow_list
+
+# 提交一条SQL上线工单
+archery.archery_workflow_submit
+
+# 审核工单
+archery.archery_workflow_audit
+
+# 列出指定用户待审核清单（过滤，分页）
+archery.archery_workflow_auditlist
+
+# 执行一条工单
+archery.archery_workflow_execute
+
+# 获取某个工单的日志（分页）
+archery.archery_workflow_log
+
+# 对提供的SQL进行语法检查
+archery.archery_workflow_sqlcheck
 
 
 Bugs and Feature Requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- `If you Found bug or have a feature request? Please open a new issue <https://github.com/archerysec/archerysec/issues>`__
+- `If you Found bug or have a feature request? Please open a new issue <https://github.com/wensaus/ArcheryPy/issues>`__

@@ -1,11 +1,18 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+# @FileName      : setup
+# @Time          : 2023-11-20 09:55:40
+# @Author        : zhangchao
+# @description   :
+"""
 
 import ast
 import os
 import re
 import sys
 
-from pyArchery import __version__ as version
+from archeryPy import __version__ as version
 
 try:
     from setuptools import setup
@@ -25,18 +32,18 @@ if sys.argv[-1] == 'install':
     sys.exit(0)
 
 setup(
-    name='pyArchery',
-    packages=['pyArchery'],
+    name='ArcheryPy',
+    packages=['archeryPy'],
     version=version,
     description='Python library enumerating the Archery tool RESTFul API endpoints.',
     long_description=readme,
-    author='Anand Tiwari',
-    author_email='anandtiwarics@gmail.com',
-    url='https://github.com/archerysec/',
+    author='wensaus',
+    author_email='wensau@163.com',
+    url='https://github.com/wensaus/ArcheryPy',
     license='MIT License',
     zip_safe=True,
     install_requires=['requests'],
-    keywords=['pyArchery', 'api', 'security', 'software', 'ArcherySec'],
+    keywords=['pyArchery', 'api'],
     classifiers=[
         'Intended Audience :: Developers',
         'Natural Language :: English',
@@ -46,4 +53,3 @@ setup(
         'Programming Language :: Python',
     ]
 )
-

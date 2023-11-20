@@ -1,14 +1,12 @@
-# Quick Start
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+# @FileName      : example
+# @Time          : 2023-11-20 10:05:09
+# @Author        : wensaus
+# @description   :
+"""
 
-Several quick start options are available:
-
-- Install with pip: `pip install PyArchery`
-- Build locally: `python setup.py build`
-- [Download the latest release](https://github.com/target/webinspectapi/releases/latest/)
-
-## Example
-
-```
 from archeryPy import api
 
 # Set Archery url
@@ -46,4 +44,3 @@ archery.archery_workflow_log
 
 # 对提供的SQL进行语法检查
 archery.archery_workflow_sqlcheck
-```
